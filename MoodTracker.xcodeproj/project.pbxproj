@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		7D52C7CDA5E8DD5D8B586B5A /* Pods_MoodTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA56C097129429DAD061E55 /* Pods_MoodTrackerUITests.framework */; };
+		9029A0BA1DEA7EF400D8ADA8 /* Dates.m in Sources */ = {isa = PBXBuildFile; fileRef = 9029A0B91DEA7EF400D8ADA8 /* Dates.m */; };
+		9029A0BE1DEAA85C00D8ADA8 /* DayAxisValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9029A0BD1DEAA85C00D8ADA8 /* DayAxisValueFormatter.m */; };
+		9029AD551DE93224005A62F6 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9029AD541DE93224005A62F6 /* GraphViewController.m */; };
+		9029AD5E1DE93E44005A62F6 /* DateValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9029AD5D1DE93E44005A62F6 /* DateValueFormatter.m */; };
+		9029AD621DE959E4005A62F6 /* ScrollableGraphView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9029AD611DE959E4005A62F6 /* ScrollableGraphView.framework */; };
+		9029AD631DE95A4F005A62F6 /* ScrollableGraphView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9029AD611DE959E4005A62F6 /* ScrollableGraphView.framework */; };
+		9029AD641DE95A4F005A62F6 /* ScrollableGraphView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9029AD611DE959E4005A62F6 /* ScrollableGraphView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		90AB1AE21DE687B900F8134F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AB1AE11DE687B900F8134F /* main.m */; };
 		90AB1AE51DE687B900F8134F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AB1AE41DE687B900F8134F /* AppDelegate.m */; };
 		90AB1AE81DE687B900F8134F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90AB1AE71DE687B900F8134F /* ViewController.m */; };
@@ -39,12 +46,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9029AD5B1DE9381B005A62F6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9029AD641DE95A4F005A62F6 /* ScrollableGraphView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		31B10FF6B478D081B8BE8FA7 /* Pods_MoodTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoodTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		513154C9FF12DAE63A5841B3 /* Pods-MoodTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodTracker/Pods-MoodTracker.release.xcconfig"; sourceTree = "<group>"; };
 		57324CC14D4B301F59D642B3 /* Pods-MoodTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodTrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodTrackerTests/Pods-MoodTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		69F0AFC9885473BD326E7AC6 /* Pods-MoodTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodTrackerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoodTrackerTests/Pods-MoodTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		72869FFEBF02397A1EF317FE /* Pods-MoodTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoodTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoodTracker/Pods-MoodTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		9029A0B81DEA7EF400D8ADA8 /* Dates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dates.h; sourceTree = "<group>"; };
+		9029A0B91DEA7EF400D8ADA8 /* Dates.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dates.m; sourceTree = "<group>"; };
+		9029A0BC1DEAA85C00D8ADA8 /* DayAxisValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayAxisValueFormatter.h; sourceTree = "<group>"; };
+		9029A0BD1DEAA85C00D8ADA8 /* DayAxisValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayAxisValueFormatter.m; sourceTree = "<group>"; };
+		9029AD531DE93224005A62F6 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		9029AD541DE93224005A62F6 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		9029AD581DE9381A005A62F6 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9029AD5C1DE93E44005A62F6 /* DateValueFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateValueFormatter.h; sourceTree = "<group>"; };
+		9029AD5D1DE93E44005A62F6 /* DateValueFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateValueFormatter.m; sourceTree = "<group>"; };
+		9029AD611DE959E4005A62F6 /* ScrollableGraphView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScrollableGraphView.framework; path = "../../../Library/Developer/Xcode/DerivedData/MoodTracker-cbibhyhwtjwoerhbqneotomrqeye/Build/Products/Debug-iphoneos/ScrollableGraphView/ScrollableGraphView.framework"; sourceTree = "<group>"; };
 		90AB1ADD1DE687B900F8134F /* MoodTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90AB1AE11DE687B900F8134F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		90AB1AE31DE687B900F8134F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,6 +106,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9029AD631DE95A4F005A62F6 /* ScrollableGraphView.framework in Frameworks */,
+				9029AD621DE959E4005A62F6 /* ScrollableGraphView.framework in Frameworks */,
 				F773CBDDBDEA2E267D831CE1 /* Pods_MoodTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,9 +144,60 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9029AD4F1DE93160005A62F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9029AD501DE9317C005A62F6 /* NewPostsViewControllers */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		9029AD501DE9317C005A62F6 /* NewPostsViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				90AB1AE61DE687B900F8134F /* ViewController.h */,
+				90AB1AE71DE687B900F8134F /* ViewController.m */,
+				9029AD511DE931AE005A62F6 /* RatingsViewController */,
+				9029AD521DE931E9005A62F6 /* Graph ViewController */,
+			);
+			name = NewPostsViewControllers;
+			sourceTree = "<group>";
+		};
+		9029AD511DE931AE005A62F6 /* RatingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90AB1B161DE693A600F8134F /* RatingsTableViewController.h */,
+				90AB1B171DE693A600F8134F /* RatingsTableViewController.m */,
+			);
+			name = RatingsViewController;
+			sourceTree = "<group>";
+		};
+		9029AD521DE931E9005A62F6 /* Graph ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9029AD531DE93224005A62F6 /* GraphViewController.h */,
+				9029AD541DE93224005A62F6 /* GraphViewController.m */,
+			);
+			name = "Graph ViewController";
+			sourceTree = "<group>";
+		};
+		9029AD5F1DE93E4B005A62F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9029AD5C1DE93E44005A62F6 /* DateValueFormatter.h */,
+				9029AD5D1DE93E44005A62F6 /* DateValueFormatter.m */,
+				9029A0B81DEA7EF400D8ADA8 /* Dates.h */,
+				9029A0B91DEA7EF400D8ADA8 /* Dates.m */,
+				9029A0BC1DEAA85C00D8ADA8 /* DayAxisValueFormatter.h */,
+				9029A0BD1DEAA85C00D8ADA8 /* DayAxisValueFormatter.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		90AB1AD41DE687B900F8134F = {
 			isa = PBXGroup;
 			children = (
+				9029AD581DE9381A005A62F6 /* Charts.framework */,
 				90AB1ADF1DE687B900F8134F /* MoodTracker */,
 				90AB1AFC1DE687BA00F8134F /* MoodTrackerTests */,
 				90AB1B071DE687BA00F8134F /* MoodTrackerUITests */,
@@ -138,10 +222,8 @@
 			children = (
 				90AB1AE31DE687B900F8134F /* AppDelegate.h */,
 				90AB1AE41DE687B900F8134F /* AppDelegate.m */,
-				90AB1AE61DE687B900F8134F /* ViewController.h */,
-				90AB1AE71DE687B900F8134F /* ViewController.m */,
-				90AB1B161DE693A600F8134F /* RatingsTableViewController.h */,
-				90AB1B171DE693A600F8134F /* RatingsTableViewController.m */,
+				9029AD5F1DE93E4B005A62F6 /* Model */,
+				9029AD4F1DE93160005A62F6 /* Controller */,
 				90AB1AE91DE687B900F8134F /* Main.storyboard */,
 				90AB1AEF1DE687BA00F8134F /* Assets.xcassets */,
 				90AB1AF11DE687BA00F8134F /* LaunchScreen.storyboard */,
@@ -181,6 +263,7 @@
 		DA41139BAF6BD46C11415624 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9029AD611DE959E4005A62F6 /* ScrollableGraphView.framework */,
 				A95B091DD906781CDB052B8F /* Pods_MoodTracker.framework */,
 				31B10FF6B478D081B8BE8FA7 /* Pods_MoodTrackerTests.framework */,
 				CEA56C097129429DAD061E55 /* Pods_MoodTrackerUITests.framework */,
@@ -201,6 +284,7 @@
 				90AB1ADB1DE687B900F8134F /* Resources */,
 				E1C94539F4D1896D152C56F2 /* [CP] Embed Pods Frameworks */,
 				626FADAE66FAC155B1D6D1F7 /* [CP] Copy Pods Resources */,
+				9029AD5B1DE9381B005A62F6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -474,8 +558,12 @@
 				90AB1AE81DE687B900F8134F /* ViewController.m in Sources */,
 				90AB1AE51DE687B900F8134F /* AppDelegate.m in Sources */,
 				90AB1AE21DE687B900F8134F /* main.m in Sources */,
+				9029A0BE1DEAA85C00D8ADA8 /* DayAxisValueFormatter.m in Sources */,
+				9029A0BA1DEA7EF400D8ADA8 /* Dates.m in Sources */,
 				90AB1AEE1DE687BA00F8134F /* MoodTracker.xcdatamodeld in Sources */,
+				9029AD5E1DE93E44005A62F6 /* DateValueFormatter.m in Sources */,
 				90AB1B181DE693A600F8134F /* RatingsTableViewController.m in Sources */,
+				9029AD551DE93224005A62F6 /* GraphViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -719,6 +807,7 @@
 				90AB1B0F1DE687BA00F8134F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90AB1B101DE687BA00F8134F /* Build configuration list for PBXNativeTarget "MoodTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -727,6 +816,7 @@
 				90AB1B121DE687BA00F8134F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90AB1B131DE687BA00F8134F /* Build configuration list for PBXNativeTarget "MoodTrackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -735,6 +825,7 @@
 				90AB1B151DE687BA00F8134F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceo-oL-rz6">
-                                <rect key="frame" x="0.0" y="601" width="375" height="66"/>
+                                <rect key="frame" x="0.0" y="552" width="375" height="66"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.55294117647058827" blue="0.61960784313725492" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="Zub-u9-Hwk"/>
@@ -37,7 +38,7 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWn-GT-caG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="537"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="488"/>
                                 <connections>
                                     <segue destination="Jnh-cm-jdb" kind="embed" id="cmd-B9-j06"/>
                                 </connections>
@@ -114,7 +115,7 @@
             <objects>
                 <tableViewController id="Jnh-cm-jdb" customClass="RatingsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ibl-6y-KPY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="537"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="488"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -494,6 +495,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="CB6-ah-MeN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="F8K-Ku-Fqg">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.35686274509999999" green="0.7843137255" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -549,7 +551,7 @@
         <!--Graph-->
         <scene sceneID="yrp-Rc-Fv5">
             <objects>
-                <viewController id="EE0-6O-Sot" sceneMemberID="viewController">
+                <viewController id="EE0-6O-Sot" customClass="GraphViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nbL-zC-X74"/>
                         <viewControllerLayoutGuide type="bottom" id="nYd-uf-WP6"/>
@@ -558,28 +560,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graph/info view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eha-RZ-kOm">
-                                <rect key="frame" x="78" y="263" width="219" height="140"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAk-fr-DES">
+                                <rect key="frame" x="16" y="329" width="343" height="281"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OpX-uo-Qdf">
+                                <rect key="frame" x="16" y="28" width="343" height="280"/>
+                                <color key="backgroundColor" red="0.35686274509999999" green="0.7843137255" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="02Q-Wf-Nyx"/>
-                                    <constraint firstAttribute="width" constant="219" id="pNl-vF-T1a"/>
+                                    <constraint firstAttribute="height" constant="280" id="Ngl-cF-pSd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.35686274509999999" green="0.7843137255" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="eha-RZ-kOm" firstAttribute="centerY" secondItem="yyH-JW-Ffb" secondAttribute="centerY" id="GfT-Jb-T5j"/>
-                            <constraint firstItem="eha-RZ-kOm" firstAttribute="centerX" secondItem="yyH-JW-Ffb" secondAttribute="centerX" id="g3l-dq-gR0"/>
+                            <constraint firstItem="OpX-uo-Qdf" firstAttribute="leading" secondItem="yyH-JW-Ffb" secondAttribute="leadingMargin" id="C6r-sd-6Xk"/>
+                            <constraint firstItem="OpX-uo-Qdf" firstAttribute="trailing" secondItem="yyH-JW-Ffb" secondAttribute="trailingMargin" id="P9O-MP-IYH"/>
+                            <constraint firstItem="oAk-fr-DES" firstAttribute="trailing" secondItem="yyH-JW-Ffb" secondAttribute="trailingMargin" id="Qc1-6J-6qK"/>
+                            <constraint firstItem="nYd-uf-WP6" firstAttribute="top" secondItem="oAk-fr-DES" secondAttribute="bottom" constant="8" id="Rl2-2M-rye"/>
+                            <constraint firstItem="oAk-fr-DES" firstAttribute="top" secondItem="OpX-uo-Qdf" secondAttribute="bottom" constant="21" id="XcR-QO-fd1"/>
+                            <constraint firstItem="oAk-fr-DES" firstAttribute="leading" secondItem="yyH-JW-Ffb" secondAttribute="leadingMargin" id="eRj-mp-jhz"/>
+                            <constraint firstItem="OpX-uo-Qdf" firstAttribute="top" secondItem="nbL-zC-X74" secondAttribute="bottom" constant="8" id="lNk-OC-aGc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graph" id="Akb-FJ-Yz1"/>
+                    <connections>
+                        <outlet property="bottomView" destination="oAk-fr-DES" id="Pz7-9C-BkU"/>
+                        <outlet property="topView" destination="OpX-uo-Qdf" id="gIM-yb-Ezz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prQ-ua-a6s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="1391"/>
+            <point key="canvasLocation" x="1004" y="1390.2548725637182"/>
         </scene>
         <!--Settings-->
         <scene sceneID="TPM-aM-agQ">
