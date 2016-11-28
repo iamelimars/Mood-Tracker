@@ -18,18 +18,15 @@
     [super viewDidLoad];
     
     self.myDates = [self getNext30Days];
-    
-    
     self.myValues = [[NSMutableArray alloc] init];
     
     for (int i = 0; i < 30; i++) {
-        
         //i = rand() % 10 + 1;
         NSNumber *value = [NSNumber numberWithInt:rand() % 10 + 1];
         [self.myValues addObject:value];
     }
 
-
+    
     self.dataGraph = [[BEMSimpleLineGraphView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height / 2)];
     
     
@@ -47,7 +44,6 @@
     
     self.dataGraph.delegate = self;
     self.dataGraph.dataSource = self;
-    
     self.dataGraph.enableTouchReport = YES;
     self.dataGraph.enablePopUpReport = YES;
     self.dataGraph.enableYAxisLabel = YES;
@@ -57,64 +53,44 @@
 
     self.dataGraph.autoScaleYAxis = YES;
     self.dataGraph.alwaysDisplayDots = NO;
-    //self.dataGraph.enableReferenceXAxisLines = YES;
-    //self.dataGraph.enableReferenceYAxisLines = YES;
-    self.dataGraph.enableReferenceAxisFrame = YES;
-    
-//    self.dataGraph.averageLine.enableAverageLine = YES;
-//    self.dataGraph.averageLine.alpha = 0.6;
-//    self.dataGraph.averageLine.color = [UIColor whiteColor];
-//    self.dataGraph.averageLine.width = 2.5;
-//    self.dataGraph.averageLine.dashPattern = @[@(2),@(2)];
+    self.dataGraph.enableReferenceXAxisLines = YES;
+//    self.dataGraph.enableReferenceYAxisLines = YES;
+//    self.dataGraph.enableReferenceAxisFrame = YES;
+
 
     self.dataGraph.animationGraphStyle = BEMLineAnimationDraw;
-
     self.dataGraph.lineDashPatternForReferenceYAxisLines = @[@(2),@(2)];
     self.dataGraph.formatStringForValues = @"%.1f";
-    
     self.dataGraph.enableBezierCurve = YES;
-
-    //self.dataGraph.backgroundColor = [UIColor colorWithRed:91/255.0 green:200/255.0 blue:172/255.0 alpha:1.0];
     self.dataGraph.colorTop = [UIColor colorWithRed:91/255.0 green:200/255.0 blue:172/255.0 alpha:0.0];
     self.dataGraph.colorBottom = [UIColor colorWithRed:91/255.0 green:200/255.0 blue:172/255.0 alpha:0.0];
-    
     [self.view addSubview:self.dataGraph];
     
-//    self.graphView = [[ScrollableGraphView alloc] init];
-//    self.graphView.frame = self.bottomView.frame;
-//    [self.graphView setLineStyle:ScrollableGraphViewLineStyleSmooth];
-//    self.graphView.shouldFill = true;
-//    self.graphView.backgroundFillColor = [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0];
-//    self.graphView.lineWidth = 1.0;
-//    self.graphView.lineColor = [UIColor colorWithRed:119/255.0 green:119/255.0 blue:119/255.0 alpha:1.0];
-//    self.graphView.fillColor = [UIColor colorWithRed:85/255.0 green:85/255.0 blue:85/255.0 alpha:1.0];
-//    
-//    self.graphView.dataPointSize = 2;
-//    self.graphView.dataPointFillColor = [UIColor whiteColor];
-//    self.graphView.dataPointSpacing = 80;
-//    
-//    self.graphView.referenceLineColor = [[UIColor whiteColor]colorWithAlphaComponent:0.2];
-//    self.graphView.referenceLineLabelColor = [UIColor whiteColor];
-//    self.graphView.dataPointLabelColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
-//    self.graphView.shouldShowLabels = YES;
-//    
-//    NSMutableArray *data = [[NSMutableArray alloc] initWithObjects:
-//                            [NSNumber numberWithInt:4],
-//                            [NSNumber numberWithInt:8],
-//                            [NSNumber numberWithInt:15],
-//                            [NSNumber numberWithInt:16],
-//                            [NSNumber numberWithInt:23],
-//                            [NSNumber numberWithInt:42], nil];
-//    
-//    NSMutableArray *labels = [[NSMutableArray alloc] initWithObjects:
-//                              @"One",
-//                              @"Two",
-//                              @"Three",
-//                              @"Four",
-//                              @"Five",
-//                              @"Six", nil];
-//    [self.graphView setWithData:data withLabels:labels];
-//    [self.view addSubview: self.graphView];
+    //Plus Minus View creation
+    UIView *changeWeekView = [[UIView alloc] initWithFrame:CGRectMake(0, self.dataGraph.frame.size.height + 2, self.view.frame.size.width, 50)];
+    changeWeekView.backgroundColor = [UIColor clearColor];
+    [self.view addSubview:changeWeekView];
+    
+    UILabel *currentWeekLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, changeWeekView.frame.size.height)];
+    currentWeekLabel.textColor = [UIColor whiteColor];
+    currentWeekLabel.textAlignment = NSTextAlignmentCenter;
+    currentWeekLabel.text = @"11/30 - 12/04";
+    currentWeekLabel.font = [UIFont fontWithName:@"Avenir-Light" size:14.0];
+    [changeWeekView addSubview:currentWeekLabel];
+    
+    UIButton *minusButton = [[UIButton alloc] initWithFrame:CGRectMake(0, -10, changeWeekView.frame.size.width / 2, 60)];
+    [minusButton setTitle:@"-" forState:UIControlStateNormal];
+    minusButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Light" size:50.0];
+    [changeWeekView addSubview:minusButton];
+    
+    UIButton *addButton = [[UIButton alloc] initWithFrame:CGRectMake(minusButton.frame.size.width, -10, changeWeekView.frame.size.width / 2, 60)];
+    [addButton setTitle:@"+" forState:UIControlStateNormal];
+    addButton.titleLabel.font = [UIFont fontWithName:@"Avenir-Light" size:35];
+    [changeWeekView addSubview:addButton];
+   
+    
+    
+
 //    
 //    
 //    self.ratingsArray = [[NSMutableArray alloc]initWithObjects:
@@ -177,6 +153,7 @@
     //[self updateChartData];
 
 }
+
 
 #pragma mark - SimpleLineGraph Data Source
 

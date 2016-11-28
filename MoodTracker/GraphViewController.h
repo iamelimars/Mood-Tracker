@@ -9,18 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "DateValueFormatter.h"
 #import "DayAxisValueFormatter.h"
-@import ScrollableGraphView;
 @import Charts;
 #import "BEMSimpleLineGraphView.h"
 
 
 
-@interface GraphViewController : UIViewController <ChartViewDelegate, IChartAxisValueFormatter, BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource>
+@interface GraphViewController : UIViewController <ChartViewDelegate, IChartAxisValueFormatter, BEMSimpleLineGraphDelegate, BEMSimpleLineGraphDataSource, UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet BEMSimpleLineGraphView *dataGraph;
 
 @property (nonatomic, strong) IBOutlet LineChartView *chartView;
 @property (nonatomic, strong) NSMutableArray *ratingsArray;
-@property (strong, nonatomic) IBOutlet ScrollableGraphView *graphView;
 @property (weak, nonatomic) IBOutlet UIView *bottomView;
 @property (strong, nonatomic) IBOutlet UIView *topView;
 
