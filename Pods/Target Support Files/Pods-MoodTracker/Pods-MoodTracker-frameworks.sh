@@ -86,10 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/BEMSimpleLineGraph/BEMSimpleLineGraph.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Charts/Charts.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ScrollableGraphView/ScrollableGraphView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JTCalendar/JTCalendar.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/BEMSimpleLineGraph/BEMSimpleLineGraph.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Charts/Charts.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/ScrollableGraphView/ScrollableGraphView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JTCalendar/JTCalendar.framework"
 fi

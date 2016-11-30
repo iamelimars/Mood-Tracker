@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2D45595DA0646D0CB205E150556BB1D"
+               BlueprintIdentifier = "9A4C534DFE73C46E4989A9CBF44B657E"
                BuildableName = "Pods_MoodTracker.framework"
                BlueprintName = "Pods-MoodTracker"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2D45595DA0646D0CB205E150556BB1D"
+            BlueprintIdentifier = "9A4C534DFE73C46E4989A9CBF44B657E"
             BuildableName = "Pods_MoodTracker.framework"
             BlueprintName = "Pods-MoodTracker"
             ReferencedContainer = "container:Pods.xcodeproj">

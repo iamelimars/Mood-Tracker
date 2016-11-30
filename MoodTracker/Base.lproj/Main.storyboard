@@ -516,7 +516,7 @@
         <!--Calendar-->
         <scene sceneID="8qJ-Ur-Jzc">
             <objects>
-                <viewController id="asi-SD-JcZ" sceneMemberID="viewController">
+                <viewController id="asi-SD-JcZ" customClass="CalendarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="V6M-k4-LPs"/>
                         <viewControllerLayoutGuide type="bottom" id="xgp-2l-T5A"/>
@@ -525,24 +525,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnr-XN-Bhy">
-                                <rect key="frame" x="78" y="263" width="219" height="140"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ke7-hz-T1O" customClass="JTHorizontalCalendarView">
+                                <rect key="frame" x="0.0" y="77" width="375" height="333"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.63358040093843748" blue="0.68653839939603534" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VP2-Ay-9tv" customClass="JTCalendarMenuView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="eHd-eM-hnv"/>
-                                    <constraint firstAttribute="width" constant="219" id="mnU-1d-SsR"/>
+                                    <constraint firstAttribute="height" constant="69" id="LgX-rj-l4m"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.55294117649999996" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Xnr-XN-Bhy" firstAttribute="centerX" secondItem="ieb-2m-PST" secondAttribute="centerX" id="LXd-GZ-zAw"/>
-                            <constraint firstItem="Xnr-XN-Bhy" firstAttribute="centerY" secondItem="ieb-2m-PST" secondAttribute="centerY" id="gLw-f7-rAI"/>
+                            <constraint firstItem="ke7-hz-T1O" firstAttribute="top" secondItem="VP2-Ay-9tv" secondAttribute="bottom" constant="8" id="DFR-CH-A6j"/>
+                            <constraint firstAttribute="trailing" secondItem="ke7-hz-T1O" secondAttribute="trailing" id="JE3-WS-2lw"/>
+                            <constraint firstItem="VP2-Ay-9tv" firstAttribute="top" secondItem="ieb-2m-PST" secondAttribute="top" id="KFq-yB-dld"/>
+                            <constraint firstItem="ke7-hz-T1O" firstAttribute="leading" secondItem="ieb-2m-PST" secondAttribute="leading" id="P1I-Ze-njc"/>
+                            <constraint firstItem="xgp-2l-T5A" firstAttribute="top" secondItem="ke7-hz-T1O" secondAttribute="bottom" constant="208" id="Ye8-1O-WHs"/>
+                            <constraint firstItem="VP2-Ay-9tv" firstAttribute="leading" secondItem="ieb-2m-PST" secondAttribute="leading" id="jHD-Za-inG"/>
+                            <constraint firstAttribute="trailing" secondItem="VP2-Ay-9tv" secondAttribute="trailing" id="u0S-Ua-0LW"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" id="ogZ-gw-opd"/>
+                    <connections>
+                        <outlet property="calendarContentView" destination="ke7-hz-T1O" id="UFY-6J-9iR"/>
+                        <outlet property="calendarMenuView" destination="VP2-Ay-9tv" id="rdJ-f4-cKJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMu-Lt-Yaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1BB53EC421557F2A533F5EECFEF18419'
-               BlueprintName = 'ScrollableGraphView'
+               BlueprintIdentifier = '91D0AFD51BF2D04784321D0DCD086326'
+               BlueprintName = 'JTCalendar'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'ScrollableGraphView.framework'>
+               BuildableName = 'JTCalendar.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

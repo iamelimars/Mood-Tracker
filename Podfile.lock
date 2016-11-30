@@ -3,18 +3,18 @@ PODS:
   - Charts (3.0.1):
     - Charts/Core (= 3.0.1)
   - Charts/Core (3.0.1)
-  - ScrollableGraphView (3.0.0)
+  - JTCalendar (2.1.9)
 
 DEPENDENCIES:
   - BEMSimpleLineGraph
   - Charts
-  - ScrollableGraphView
+  - JTCalendar (~> 2.0)
 
 SPEC CHECKSUMS:
   BEMSimpleLineGraph: 44fd451f27f8e9cf96f2da5bea27603093576dd1
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
-  ScrollableGraphView: 9b0ff86f9193068ffaf7e7ea875dcd297d7e8ded
+  JTCalendar: beb2f4c1b639bf6880f680b4858227acf83a049c
 
-PODFILE CHECKSUM: 0a8431cfe7089239b1a2efff803bd0e07102c9df
+PODFILE CHECKSUM: 2e8b7b649f540bb4d97d16fec6cbef7226d5082a
 
 COCOAPODS: 1.1.1

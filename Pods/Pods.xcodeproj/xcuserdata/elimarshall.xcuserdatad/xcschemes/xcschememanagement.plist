@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JTCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-MoodTracker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,20 +34,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ScrollableGraphView.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>03B10326D15F84B220788BF3DF5FBBB8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>1BB53EC421557F2A533F5EECFEF18419</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,7 +52,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D2D45595DA0646D0CB205E150556BB1D</key>
+		<key>91D0AFD51BF2D04784321D0DCD086326</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A4C534DFE73C46E4989A9CBF44B657E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
