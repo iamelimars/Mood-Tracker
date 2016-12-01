@@ -16,4 +16,7 @@
 
 @property (strong, nonatomic) JTCalendarManager *calendarManager;
 
+@property (strong, nonatomic) IBOutlet UILabel *ratingLabel;
+@property (strong, nonatomic) IBOutlet UITextView *commentsTextView;
+
 @end

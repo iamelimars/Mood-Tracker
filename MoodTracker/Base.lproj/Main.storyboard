@@ -536,22 +536,50 @@
                                     <constraint firstAttribute="height" constant="69" id="LgX-rj-l4m"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10: AWESOME!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHi-x3-tK5">
+                                <rect key="frame" x="0.0" y="433" width="375" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="H49-9N-dUv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uSS-Qs-aos">
+                                <rect key="frame" x="0.0" y="484" width="375" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="lNm-oG-1zz"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.55294117649999996" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ke7-hz-T1O" firstAttribute="top" secondItem="VP2-Ay-9tv" secondAttribute="bottom" constant="8" id="DFR-CH-A6j"/>
-                            <constraint firstAttribute="trailing" secondItem="ke7-hz-T1O" secondAttribute="trailing" id="JE3-WS-2lw"/>
+                            <constraint firstItem="ZHi-x3-tK5" firstAttribute="top" secondItem="ke7-hz-T1O" secondAttribute="bottom" constant="23" id="6wn-KR-yVn"/>
+                            <constraint firstAttribute="trailing" secondItem="ZHi-x3-tK5" secondAttribute="trailing" id="Bml-zg-8NK"/>
                             <constraint firstItem="VP2-Ay-9tv" firstAttribute="top" secondItem="ieb-2m-PST" secondAttribute="top" id="KFq-yB-dld"/>
-                            <constraint firstItem="ke7-hz-T1O" firstAttribute="leading" secondItem="ieb-2m-PST" secondAttribute="leading" id="P1I-Ze-njc"/>
-                            <constraint firstItem="xgp-2l-T5A" firstAttribute="top" secondItem="ke7-hz-T1O" secondAttribute="bottom" constant="208" id="Ye8-1O-WHs"/>
+                            <constraint firstItem="xgp-2l-T5A" firstAttribute="top" secondItem="uSS-Qs-aos" secondAttribute="bottom" constant="6" id="alc-Y2-NWk"/>
+                            <constraint firstAttribute="trailing" secondItem="uSS-Qs-aos" secondAttribute="trailing" id="eEG-Am-zRr"/>
+                            <constraint firstItem="ke7-hz-T1O" firstAttribute="top" secondItem="VP2-Ay-9tv" secondAttribute="bottom" constant="8" id="iK2-1a-vJE"/>
                             <constraint firstItem="VP2-Ay-9tv" firstAttribute="leading" secondItem="ieb-2m-PST" secondAttribute="leading" id="jHD-Za-inG"/>
+                            <constraint firstItem="ZHi-x3-tK5" firstAttribute="leading" secondItem="ieb-2m-PST" secondAttribute="leading" id="kjP-q3-fJC"/>
+                            <constraint firstAttribute="trailing" secondItem="ke7-hz-T1O" secondAttribute="trailing" id="tP7-59-vdV"/>
                             <constraint firstAttribute="trailing" secondItem="VP2-Ay-9tv" secondAttribute="trailing" id="u0S-Ua-0LW"/>
+                            <constraint firstItem="ke7-hz-T1O" firstAttribute="leading" secondItem="ieb-2m-PST" secondAttribute="leading" id="w6t-qG-inG"/>
+                            <constraint firstItem="uSS-Qs-aos" firstAttribute="leading" secondItem="ieb-2m-PST" secondAttribute="leading" id="zI6-Fe-14o"/>
+                            <constraint firstItem="uSS-Qs-aos" firstAttribute="top" secondItem="ZHi-x3-tK5" secondAttribute="bottom" constant="8" id="zfj-y3-QMk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" id="ogZ-gw-opd"/>
                     <connections>
                         <outlet property="calendarContentView" destination="ke7-hz-T1O" id="UFY-6J-9iR"/>
                         <outlet property="calendarMenuView" destination="VP2-Ay-9tv" id="rdJ-f4-cKJ"/>
+                        <outlet property="commentsTextView" destination="uSS-Qs-aos" id="o12-oL-HFn"/>
+                        <outlet property="ratingLabel" destination="ZHi-x3-tK5" id="1Sc-Ja-oCL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMu-Lt-Yaq" userLabel="First Responder" sceneMemberID="firstResponder"/>
